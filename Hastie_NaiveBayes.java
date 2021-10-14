@@ -19,6 +19,7 @@ public class Hastie_NaiveBayes {
 		// Susy.csv,and the margin of records of training and test file
 		//
 		String fichero = args[0];
+		String ficheroTest = args[1];
 		Double TrainingStart = Double.parseDouble(args[2]);
 		Double TrainingEnd = Double.parseDouble(args[3]);
 		Double TestStart = Double.parseDouble(args[4]);
@@ -458,7 +459,7 @@ public class Hastie_NaiveBayes {
 		}
 
 		try {
-			FileReader fr = new FileReader(fichero);
+			FileReader fr = new FileReader(ficheroTest);
 			BufferedReader br = new BufferedReader(fr);
 			FileWriter Salida = null;
 			PrintWriter pw = null;
@@ -649,7 +650,7 @@ public class Hastie_NaiveBayes {
 			} // end while
 
 			System.out.println("");
-			System.out.println(" Total hits with the TEST FILE while learning paso de err=  " + TotAciertos);
+			System.out.println(" Total hits with the TEST FILE while learning =  " + TotAciertos);
 			System.out.println(" Total failures with the TEST FILE = " + TotFallos);
 
 			System.out.println(" Assigned without foundation = = " + TotValoresACero);
