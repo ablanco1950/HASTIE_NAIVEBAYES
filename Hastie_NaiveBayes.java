@@ -252,9 +252,7 @@ public class Hastie_NaiveBayes {
 		Conta = 0.0;
 		ContLe = 0.0;
 		Cont = -1;
-		for (int i = 0; i < NumClases; i++) {
-			ContClases[i] = 0.0;
-		}
+	
 
 		try {
 			FileReader fr = new FileReader(fichero);
@@ -283,8 +281,8 @@ public class Hastie_NaiveBayes {
 					int Clase = (int) Double.parseDouble(lineadelTraining[0]);
 					if (Clase < 0)
 						Clase = 0;
+					
 
-					ContClases[Clase]++;
 					for (int z = 1; z < NumCampos; z++) {
 						Double MaxIndice = TopeMemoria - 2.0;
 						int indice = 0;
@@ -454,9 +452,7 @@ public class Hastie_NaiveBayes {
 		Conta = 0.0;
 		ContLe = 0.0;
 		Cont = -1;
-		for (int i = 0; i < NumClases; i++) {
-			ContClases[i] = 0.0;
-		}
+	
 
 		try {
 			FileReader fr = new FileReader(ficheroTest);
@@ -474,6 +470,7 @@ public class Hastie_NaiveBayes {
 					ContLe++;
 					Cont++;
 					String lineadelTraining[] = linea.split(";");
+					
 
 					
 					Double[] P_indice_clase = new Double[NumClases];
@@ -486,8 +483,7 @@ public class Hastie_NaiveBayes {
 					int Clase = (int) Double.parseDouble(lineadelTraining[0]);
 					if (Clase < 0)
 						Clase = 0;
-
-					ContClases[Clase]++;
+					
 					for (int z = 1; z < NumCampos; z++) {
 						Double MaxIndice = TopeMemoria - 2.0;
 						int indice = 0;
@@ -558,7 +554,9 @@ public class Hastie_NaiveBayes {
 						}
 						Double[] valor = new Double[NumClases];
 						for (int i = 0; i < NumClases; i++)
-							valor[i] = Tabvotos[i][z][indice];
+						{	valor[i] = Tabvotos[i][z][indice];
+						    
+						}
 
 						//
 						// The probabilities of each class are calculated by the Naive Bayes method,
@@ -573,6 +571,7 @@ public class Hastie_NaiveBayes {
 								P_indice_clase[i] = valor[i] / ContClases[i];
 							else
 								P_indice_clase[i] = 0.0;
+							
 						}
 
 						
@@ -613,7 +612,7 @@ public class Hastie_NaiveBayes {
 					Double MaxPro = 0.0;
 
 					for (int i = 0; i < NumClases; i++) {
-
+						
 						if (TotValor[i] > MaxPro) {
 
 							MaxPro = TotValor[i];

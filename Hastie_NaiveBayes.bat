@@ -1,1 +1,1 @@
-java -jar Hastie_NaiveBayes.jar  C:\Hastie10_2.csv  C:\Hastie10_2.csv   0.0 9600.0  9601.0 12000.0
+java -jar Hastie_NaiveBayes.jar  C:\Hastie10_2.csv  C:\Hastie10_2.csv  0.0 9600.0 9601.0 12000.0
