@@ -9,6 +9,15 @@ The main difference in this model comparing with others is that each field is we
 
 Resources: Java 8
 
+The programs need to record files on disk:
+
+Hastie_10_2Weighted88PerCentHits,txt, with all te records of training, adding 0 or 1 if the record have been considered hit or failures. This allows one manual inspectión and test the results.
+
+HastieTestWithClassAsigned.txt tat is te output of the test files with the classes assigned acording wit the model.
+
+
+For this reason, it is necessary to create a folder in the C: directory with the name of HASTIE_NAIVEBAYES and to which writing rights are assigned to the user who executes the program. Ultimately c: drives are write-protected. You can also change the directory and folder, but in that case you would have to change the references to C:\SUSY_WEIGHTED_V1 in the .bat file.
+
 Functioning:
 
 Hastie_NaiveBayes.jar and Hastie_NaiveBayes.bat are downloaded to any directory. The test file Hastie10_2.csv is downloaded to the C: directory.
