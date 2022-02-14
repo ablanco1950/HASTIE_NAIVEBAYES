@@ -15,7 +15,6 @@ Hastie_10_2Weighted88PerCentHits,txt, with all te records of training, adding 0 
 
 HastieTestWithClassAsigned.txt tat is te output of the test files with the classes assigned acording wit the model.
 
-
 For this reason, it is necessary to create a folder in the C: directory with the name of HASTIE_NAIVEBAYES and to which writing rights are assigned to the user who executes the program. Ultimately c: drives are write-protected. You can also change the directory and folder, but in that case you would have to change the references to C:\HASTIE_NAIVEBAYES in the .bat file.
 
 Functioning:
@@ -26,7 +25,7 @@ Execute: Hastie_NaiveBayes.bat
 
 The training and test file margins go as parameters, initially they are from register 0 to 9600 for training and from 9601 to 12000 for test, but they can be changed.
 
-You can also use a test file that has the same structure as Hastie10_2.csv, in which the class goes in the first position of the record, by changing the only line in Hastie_NaiveBayes.bat.
+You can also use a test file that has the same structure as Hastie10_2.csv, in which the class goes in the first position of the record, by changing changing the assignment to he file and records margin in the only line in Hastie_NaiveBayes.bat.
 
 On screen it offers the results and produces a file c:\HASTIE_NAIVEBAYES\HastieTestWithClassAsigned.txt with the classes assigned to the test file.
 
