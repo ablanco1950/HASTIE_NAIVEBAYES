@@ -24,7 +24,8 @@ public class Hastie_NaiveBayes {
 		Double TrainingEnd = Double.parseDouble(args[3]);
 		Double TestStart = Double.parseDouble(args[4]);
 		Double TestEnd = Double.parseDouble(args[5]);
-
+		String ficheroOutTraining = args[6];
+		String ficheroOutTest = args[7];
 		int N = 0;
 		long Inicio = System.nanoTime();
 
@@ -259,7 +260,7 @@ public class Hastie_NaiveBayes {
 			BufferedReader br = new BufferedReader(fr);
 			FileWriter Salida = null;
 			PrintWriter pw = null;
-			Salida = new FileWriter("C:\\Hastie_10_2Weighted88PerCentHits.csv");
+			Salida = new FileWriter(ficheroOutTraining);
 			pw = new PrintWriter(Salida);
 			String linea;
 
@@ -459,7 +460,7 @@ public class Hastie_NaiveBayes {
 			BufferedReader br = new BufferedReader(fr);
 			FileWriter Salida = null;
 			PrintWriter pw = null;
-			Salida = new FileWriter("C:\\HastieTestWithClassAsigned.txt");
+			Salida = new FileWriter(ficheroOutTest);
 			pw = new PrintWriter(Salida);
 			String linea;
 			
