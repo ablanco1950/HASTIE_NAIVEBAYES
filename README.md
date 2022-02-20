@@ -5,7 +5,7 @@ HASTIE_NAIVEBAYES: from the Hastie_10_2.csv file obtained by the procedure descr
 y [i] = 1 if np.sum (X [i] ** 2)> 9.34 else -1
 that is, there are erroneous data in the training.
 
-The main difference in this model comparing with others is that each field is weihgted separately. In other models weights are identical for all fields.
+The main difference in this model comparing with others is that in the statistical process, each field is sampled differently according to its contribution to the hit rate..
 
 Resources: Java 8
 
